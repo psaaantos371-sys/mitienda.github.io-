@@ -84,7 +84,7 @@ function displayCart() {
                     <span>${item.quantity}</span>
                     <button onclick="updateQuantity(${item.id}, 1)">+</button>
                 </div>
-                <button class="remove-btn" onclick="removeFromCart(${item.id})">Quitar</button>
+                <button class="remove-btn" onclick="removeFromCart(${item.id})">✕</button>
             `;
             cartItemsDiv.appendChild(cartItemDiv);
         });
