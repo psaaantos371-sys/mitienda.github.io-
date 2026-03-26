@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta name="description" content="Accesorios premium para autos. Tienda online de calidad.">
     <title>AutoStore - Accesorios para Autos</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="navbar-container">
             <div class="logo">
                 <i class="fas fa-car"></i>
-                <span>AutoStore</span> <!-- EDITABLE: Cambiar nombre de tienda -->
+                <span>AutoStore</span>
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Inicio</a></li>
@@ -22,57 +24,44 @@
                 <li><a href="#offers">Ofertas</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
-            <div class="cart-icon">
+            <div class="cart-icon" onclick="openCart()">
                 <i class="fas fa-shopping-cart"></i>
                 <span class="cart-count">0</span>
             </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Accesorios Premium para tu Auto</h1> <!-- EDITABLE -->
-            <p>Mejora el estilo y funcionamiento de tu vehículo</p> <!-- EDITABLE -->
+            <h1>Accesorios Premium para tu Auto</h1>
+            <p>Mejora el estilo y funcionamiento de tu vehículo</p>
             <button class="btn btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">
                 Comprar Ahora
             </button>
         </div>
     </section>
 
-    <!-- PRODUCTOS SECTION -->
     <section id="products" class="products">
         <div class="container">
             <h2>Nuestros Productos</h2>
-            <div class="products-grid" id="productsGrid">
-                <!-- Los productos se cargan aquí desde JavaScript -->
-            </div>
+            <div class="products-grid" id="productsGrid"></div>
         </div>
     </section>
 
-    <!-- OFERTAS SECTION -->
     <section id="offers" class="offers">
         <div class="container">
             <h2>Ofertas Especiales</h2>
-            <div class="offers-grid" id="offersGrid">
-                <!-- Las ofertas se cargan aquí desde JavaScript -->
-            </div>
+            <div class="offers-grid" id="offersGrid"></div>
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
     <section id="about" class="about">
         <div class="container">
             <h2>Sobre AutoStore</h2>
-            <p>
-                Somos líderes en venta de accesorios de calidad para automóviles. 
-                Con más de 10 años de experiencia, ofrecemos productos premium 
-                con garantía y excelente servicio al cliente.
-            </p> <!-- EDITABLE: Cambiar descripción del negocio -->
+            <p>Somos líderes en venta de accesorios de calidad para automóviles. Con más de 10 años de experiencia, ofrecemos productos premium con garantía y excelente servicio al cliente.</p>
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
     <section id="contact" class="contact">
         <div class="container">
             <h2>Contacto</h2>
@@ -85,10 +74,9 @@
         </div>
     </section>
 
-    <!-- SHOPPING CART MODAL -->
     <div id="cartModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close" onclick="closeCart()">&times;</span>
             <h2>Carrito de Compras</h2>
             <div id="cartItems" class="cart-items"></div>
             <div class="cart-total">
@@ -98,7 +86,6 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
@@ -107,13 +94,13 @@
             </div>
             <div class="footer-section">
                 <h4>Contacto</h4>
-                <p>📱 +54 11 1234-5678</p> <!-- EDITABLE: Cambiar número -->
-                <p>📧 info@autostore.com</p> <!-- EDITABLE: Cambiar email -->
+                <p>📱 +54 11 1234-5678</p>
+                <p>📧 info@autostore.com</p>
             </div>
             <div class="footer-section">
                 <h4>Síguenos</h4>
                 <div class="social-icons">
-                    <a href="https://wa.me/541112345678" target="_blank"><i class="fab fa-whatsapp"></i></a> <!-- EDITABLE: Cambiar número WhatsApp -->
+                    <a href="https://wa.me/541112345678" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
                     <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
