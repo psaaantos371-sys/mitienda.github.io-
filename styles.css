@@ -851,7 +851,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* Cart Sidebar (Keep dark theme for contrast or adjust to matching) */
+/* Cart Sidebar */
 .cart-overlay {
     position: fixed;
     top: 0;
